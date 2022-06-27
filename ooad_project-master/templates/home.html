@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Digital Magazine Subscriptions</title>
+    <style>
+        .nav-item {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .info {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M41.59 -52.5L106.54 -15L106.54 60L41.59 97.5L-23.36 60L-23.36 -15zM106.54 60L171.5 97.5L171.5 172.5L106.54 210L41.59 172.5L41.59 97.5zM171.5 -52.5L236.45 -15L236.45 60L171.5 97.5L106.54 60L106.54 -15zM171.5 397.5L236.45 435L236.45 510L171.5 547.5L106.54 510L106.54 435zM236.45 510L301.4 547.5L301.4 622.5L236.45 660L171.5 622.5L171.5 547.5zM301.4 172.5L366.36 210L366.36 285L301.4 322.5L236.45 285L236.45 210zM366.36 510L431.31 547.5L431.31 622.5L366.36 660L301.4 622.5L301.4 547.5zM431.31 -52.5L496.27 -15L496.27 60L431.31 97.5L366.36 60L366.36 -15zM496.27 60L561.22 97.5L561.22 172.5L496.27 210L431.31 172.5L431.31 97.5zM496.27 510L561.22 547.5L561.22 622.5L496.27 660L431.31 622.5L431.31 547.5zM561.22 -52.5L626.17 -15L626.17 60L561.22 97.5L496.27 60L496.27 -15zM561.22 172.5L626.17 210L626.17 285L561.22 322.5L496.27 285L496.27 210zM626.17 510L691.13 547.5L691.13 622.5L626.17 660L561.22 622.5L561.22 547.5zM691.13 -52.5L756.08 -15L756.08 60L691.13 97.5L626.17 60L626.17 -15zM756.08 285L821.04 322.5L821.04 397.5L756.08 435L691.13 397.5L691.13 322.5zM821.03 -52.5L885.99 -15L885.99 60L821.03 97.5L756.08 60L756.08 -15zM821.03 172.5L885.99 210L885.99 285L821.03 322.5L756.08 285L756.08 210zM821.03 397.5L885.99 435L885.99 510L821.03 547.5L756.08 510L756.08 435zM1145.8 60L1210.76 97.5L1210.76 172.5L1145.8 210L1080.85 172.5L1080.85 97.5zM1145.8 285L1210.76 322.5L1210.76 397.5L1145.8 435L1080.85 397.5L1080.85 322.5zM1080.85 397.5L1145.8 435L1145.8 510L1080.85 547.5L1015.9 510L1015.9 435zM1145.8 510L1210.76 547.5L1210.76 622.5L1145.8 660L1080.85 622.5L1080.85 547.5zM1275.71 285L1340.66 322.5L1340.66 397.5L1275.71 435L1210.76 397.5L1210.76 322.5zM1210.76 397.5L1275.71 435L1275.71 510L1210.76 547.5L1145.8 510L1145.8 435zM1340.66 -52.5L1405.62 -15L1405.62 60L1340.66 97.5L1275.71 60L1275.71 -15zM1535.53 60L1600.48 97.5L1600.48 172.5L1535.53 210L1470.57 172.5L1470.57 97.5zM1535.53 285L1600.48 322.5L1600.48 397.5L1535.53 435L1470.57 397.5L1470.57 322.5zM1470.57 397.5L1535.53 435L1535.53 510L1470.57 547.5L1405.62 510L1405.62 435z' stroke='%2303305d' stroke-width='2'%3e%3c/path%3e%3cpath d='M34.09 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM99.04 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM99.04 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM34.09 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-30.86 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-30.86 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM99.04 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM34.09 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM99.04 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM99.04 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM293.9 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM293.9 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 660 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM164 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM293.9 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM293.9 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM228.95 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM423.81 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM423.81 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 660 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM423.81 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM423.81 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM358.86 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM423.81 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 660 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM553.72 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM488.77 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM618.67 660 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.54 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.54 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM683.63 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM878.49 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM813.53 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM748.58 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1008.4 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1008.4 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1203.26 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1138.3 660 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1073.35 622.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1268.21 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1333.16 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1333.16 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1268.21 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1268.21 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1333.16 -52.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1398.12 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1398.12 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1333.16 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1268.21 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1268.21 -15 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1528.03 60 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1592.98 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1592.98 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1528.03 210 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1463.07 172.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1463.07 97.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1528.03 285 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1592.98 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1592.98 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1528.03 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1463.07 397.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1463.07 322.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1528.03 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1463.07 547.5 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1398.12 510 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1398.12 435 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0z' fill='%2303305d'%3e%3c/path%3e%3cpath d='M94.22 449.35L137.52 474.35L137.52 524.35L94.22 549.35L50.91 524.35L50.91 474.35zM310.73 224.35L354.03 249.35L354.03 299.35L310.73 324.35L267.43 299.35L267.43 249.35zM527.24 449.35L570.54 474.35L570.54 524.35L527.24 549.35L483.94 524.35L483.94 474.35zM657.15 374.35L700.45 399.35L700.45 449.35L657.15 474.35L613.85 449.35L613.85 399.35zM830.36 74.35L873.66 99.35L873.66 149.35L830.36 174.35L787.06 149.35L787.06 99.35zM787.06 299.35L830.36 324.35L830.36 374.35L787.06 399.35L743.75 374.35L743.75 324.35zM873.66 149.35L916.96 174.35L916.96 224.35L873.66 249.35L830.36 224.35L830.36 174.35zM1003.57 374.35L1046.87 399.35L1046.87 449.35L1003.57 474.35L960.27 449.35L960.27 399.35zM1090.17 74.35L1133.47 99.35L1133.47 149.35L1090.17 174.35L1046.87 149.35L1046.87 99.35zM1046.87 149.35L1090.17 174.35L1090.17 224.35L1046.87 249.35L1003.57 224.35L1003.57 174.35zM1090.17 374.35L1133.47 399.35L1133.47 449.35L1090.17 474.35L1046.87 449.35L1046.87 399.35zM1133.47 449.35L1176.78 474.35L1176.78 524.35L1133.47 549.35L1090.17 524.35L1090.17 474.35zM1306.68 149.35L1349.99 174.35L1349.99 224.35L1306.68 249.35L1263.38 224.35L1263.38 174.35zM1306.68 299.35L1349.99 324.35L1349.99 374.35L1306.68 399.35L1263.38 374.35L1263.38 324.35zM1393.29 -0.65L1436.59 24.35L1436.59 74.35L1393.29 99.35L1349.99 74.35L1349.99 24.35z' stroke='rgba(6%2c 80%2c 156%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+        }
+
+        .info-desc {
+            font-size: larger;
+        }
+
+        .search-two {
+            border-radius: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .btn-outline-light {
+            border-radius: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .bookCover {
+            border-radius: 20px;
+        }
+
+        .card {
+            border-radius: 20px;
+            height: 100%;
+            -webkit-box-shadow: 2px 2px 42px -24px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 2px 42px -24px rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 2px 42px -24px rgba(0, 0, 0, 0.75);
+            border: 0ch;
+        }
+
+        .bookCover {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">EBSCO</a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.2em" height="1.2em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                    <g fill="#2F88FF" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                        <path d="M5 6H39C39 6 43 8 43 13C43 18 39 20 39 20H5C5 20 9 18 9 13C9 8 5 6 5 6Z" />
+                        <path d="M43 28H9C9 28 5 30 5 35C5 40 9 42 9 42H43C43 42 39 40 39 35C39 30 43 28 43 28Z" />
+                    </g>
+                </svg> FLIPSTER
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Who we Serve
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Academic Libraries</a></li>
+                            <li><a class="dropdown-item" href="#">Public Libraries</a></li>
+                            <li><a class="dropdown-item" href="#">Schools</a></li>
+                            <li><a class="dropdown-item" href="#">Corporate & Government</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Browse Magazines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Success Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support & Training</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container-fluid info">
+        <div class="container p-5">
+            <h1 class="text-center text-white">All Your Favorite Digital Magazines</h1>
+            <p class="text-center text-white info-desc mt-3">
+                Browse recently added, unique publications available for libraries only through Flipster, or the entire
+                Flipster collection. Contact your local EBSCO representative for a full list of available magazines.</p>
+
+            <form class="d-flex mt-5">
+                <input class="form-control search-two" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="books">
+                <div class="row px-5 py-3">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                        onchange="diplay(this.value)">
+                        <option selected value="all">Open this select menu</option>
+                        {% for item in categories %}
+                        <option value="{{item.category_name}}">{{item.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="row px-3">
+                    {% for book in books %}
+                    <div class="col-md-6 col-lg-4 col-xxl-3 col-12 book-show mb-4"
+                        data-filter="{{book.categorylist.category_name}}">
+                        <div class="card p-4">
+                            <img class="bookCover" src={{book.book_image}} alt="Unable to load book image">
+                            <h4 class="test-center mt-4">
+                                {{book.name}}
+                            </h4>
+                            <p class="content text-muted">{{book.author}}</p>
+                            <p class="mt-2">{{book.description}}</p>
+                            <a href="app/payment/{{book.id}}"
+                                class="btn text-center btn-outline-secondary">Subscribe</a>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    function diplay(value) {
+        var x = document.getElementsByClassName("book-show");
+        if (value == "all") {
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+        } else {
+            for (var i = 0; i < x.length; i++) {
+                if (x[i].getAttribute("data-filter") == value) {
+                    x[i].style.display = "block";
+                } else {
+                    x[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>

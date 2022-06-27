@@ -1,0 +1,106 @@
+{% load static %}
+{% include "base.html" %}
+<title>Login / Registration</title>
+<style>
+    body {
+        background-image: linear-gradient(to bottom, #004ec4, #646fcb, #9492d3, #bcb8da, #e0e0e0);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card {
+        min-height: 80vh;
+        border-radius: 30px;
+    }
+
+    .nav-link {
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="container-fluid" style="height: 90vh;">
+        <div class="container h-100" style="margin-top: 10vh;">
+            <div class="card p-5">
+                <div class="row">
+                    <div class="col-md-7" style="background-image: url(https://img.freepik.com/free-vector/developer-activity-concept-illustration_114360-2801.jpg?t=st=1650736400~exp=1650737000~hmac=68b73b99490d24f7cf354bf8b8133a77dc420fa94a6bbb13dc824417ed43141b&w=826); 
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        min-height: 70vh;
+                        background-position: center;">
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                            {% for message in messages %}
+                            <b>{{message}}</b>
+                            {% endfor %}
+                        </div>
+                        <center>
+                            <nav>
+                                <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#login"
+                                        role="tab" aria-controls="nav-home" aria-selected="true">Login</a>
+                                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#registration"
+                                        role="tab" aria-controls="nav-contact" aria-selected="false">Register</a>
+                                </div>
+                            </nav>
+                        </center>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="login" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="mt-5 mb-4">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" name="username" class="form-control" placeholder="Username">
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Password">
+                                    </div>
+                                    <div class="mb-5 text-center">
+                                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="registration" role="tabpanel"
+                                aria-labelledby="nav-contact-tab">
+                                <form action="register" method="post">
+                                    {% csrf_token %}
+                                    <div class="mt-5 mb-3">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" name="full_name" class="form-control"
+                                            placeholder="Full Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" name="username" class="form-control" placeholder="Username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Create Password</label>
+                                        <input type="password" name="password1" class="form-control"
+                                            placeholder="Create Password">
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" name="password2" class="form-control"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <div class="mb-5 text-center">
+                                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

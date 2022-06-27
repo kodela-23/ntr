@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Hello World {{book.name}},{{book.id}}  -->
+    {% if order is not None%}
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script type="text/javascript">
+        var options = {
+            key: "rzp_test_WIgNnWT4J4PG9R",
+            name: "Krishna",
+            description: "{{ book.description }}",
+            image: "{% static 'paymentimage.png' %}",
+            order_id: "{{order.id}}",
+
+            callback_url: "http://127.0.0.1:8000/app/success",
+            prefill: {
+                name: "{{ user.username }}",
+                email: "{{ user.email }}",
+                // contact: "{{ user.mobile_number }}",
+            },
+            theme: {
+                color: "#3399cc",
+            },
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    </script>
+    {% else %}
+    <h1>Something went wrong with the Order</h1>
+    {% endif %}
+
+</body>
+
+</html>
